@@ -1,0 +1,19 @@
+Here is a clean and easy description of yesterday’s class topics:
+
+1. Callback
+2. Promise
+
+*1. Callback * 
+   * A function passed to another function
+   * Runs after a task completes
+   * Causes callback hell when nested
+
+2.Promise	
+  A Promise in JavaScript is an object that represents the result of an asynchronous operation — something that takes time, like:
+--> Promise has 3 states:
+    * Pending → Work in progress
+    * Fulfilled / Resolved → Success
+    * Rejected → Error	 
+    
+3. asynchronous,await:
+        
