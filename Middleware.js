@@ -3,8 +3,8 @@ import express from 'express'
 
 const app=express()
 
-app.use(express.json());
-// app.use(bodyParser.json())
+// app.use(express.json());
+app.use(bodyParser.json())
 app.get('/get-user',(req,res)=>{
     console.log("Nodemone Workings")
     res.end("You are at users page")
