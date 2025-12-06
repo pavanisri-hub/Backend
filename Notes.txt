@@ -1,19 +1,145 @@
-Here is a clean and easy description of yesterday’s class topics:
+✅ 1. What is Backend?
 
-1. Callback
-2. Promise
+Backend is the server-side part of a web application.
+It handles everything that the user cannot see, such as:
 
-*1. Callback * 
-   * A function passed to another function
-   * Runs after a task completes
-   * Causes callback hell when nested
+Functions of Backend:
 
-2.Promise	
-  A Promise in JavaScript is an object that represents the result of an asynchronous operation — something that takes time, like:
---> Promise has 3 states:
-    * Pending → Work in progress
-    * Fulfilled / Resolved → Success
-    * Rejected → Error	 
-    
-3. asynchronous,await:
-        
+Processing user requests
+
+Storing and retrieving data
+
+Authentication & authorization
+
+Applying business logic
+
+Communicating with databases
+
+Security of data and APIs
+
+Sending responses back to frontend
+
+Why Backend is needed?
+
+Frontend alone cannot store data or handle logic
+
+To make applications dynamic & interactive
+
+For secure and scalable systems
+
+✅ 2. Callback
+Definition:
+
+A callback is a function passed into another function to be executed after a task completes.
+
+Where callbacks are used?
+
+Reading files
+
+API requests
+
+Timers
+
+Database operations
+
+Disadvantage:
+
+When multiple callbacks depend on each other →
+“Callback Hell” (code becomes nested and very hard to read).
+
+✅ 3. Promise
+Definition:
+
+A Promise is an object that represents the eventual result of an asynchronous operation.
+
+Promise has 3 states:
+
+Pending → Operation is still running
+
+Fulfilled / Resolved → Operation succeeded
+
+Rejected → Operation failed
+
+Why Promises?
+
+Avoid callback hell
+
+Better readability
+
+Better error handling using .catch()
+
+✅ 4. Server Creation (without code)
+
+There are two main ways you learned:
+
+a) HTTP Module (Node.js built-in)
+
+Very basic method
+
+Manually handles routing, headers, responses
+
+Mostly used to understand fundamentals
+
+b) Express.js Framework
+
+Most popular Node.js backend framework
+
+Easy routing
+
+Built-in middleware support
+
+Cleaner, faster, simpler
+
+🛠️ 5. Middleware
+Definition:
+
+A middleware is a function that runs between the request and the response.
+
+It can:
+
+Modify the request
+
+Validate data
+
+Check authentication
+
+Log details
+
+Run security checks
+
+Forward request to next step (next())
+
+Types of Middlewares You Learned:
+1. express.json()
+
+Used to read JSON data coming from the frontend
+
+Converts JSON → JavaScript object
+
+2. express.urlencoded()
+
+Handles form data (from HTML forms)
+
+Converts encoded data into readable format
+
+3. CORS Middleware
+
+Stands for Cross-Origin Resource Sharing
+
+Allows your backend to accept requests from frontend running on another domain/port
+
+Without CORS → Browser blocks the request
+
+4. Custom Middleware
+
+Created by developers for specific tasks
+
+Used for logging, checking login status, validating inputs, etc.
+
+Always calls next() to move forward
+
+
+npm i -g nodemon :
+  By this no need to restart our server again and again 
+  After this cmd to start the server is --- nodemon filename
+  
