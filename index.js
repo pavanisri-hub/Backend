@@ -1,17 +1,45 @@
-import http from 'http';
 
-const server=http.createServer((req,res) => {
-    // if(url=="/users"){
-    //     res.writeHead(200,{"Content-type":"text/plain"}
-    //         res.end("Here is the users page")
-    //     )
+// import express from 'express';
+// import cors from 'cors';
+// import mongoose from 'mongoose';
+// import studentRouter from './routers/studentsRouters.js';
 
-    // }
-    res.writeHead(200,{"Content-Type":"text/plain"})
-    res.end("Hi this Pavani From backend")
+// const app = express();
+// app.use(express.json());
+// app.use(cors());
+
+// mongoose.connect("mongodb+srv://pavanisripamu_db_user:Pavani@cluster1.coq1pvi.mongodb.net/").then(() => console.log("db connected"))
+// .catch((error) => console.log(error));
+
+// app.use('/', studentRouter);
+// app.get('/users', (req, res) => {
+//     console.log("hello this is");
+//     res.send("hello this is from backend");
+// })
+
+// app.listen(7007, () => {
+//     console.log("server running at port 7007")
+// });
+
+
+import express from 'express';
+import cors from 'cors';
+import mongoose from 'mongoose';
+import studentRouter from './routers/studentRouter.js';
+
+const app = express();
+app.use(express.json());
+app.use(cors());
+
+mongoose.connect("mongodb+srv://pavanisripamu_db_user:Pavani@cluster1.coq1pvi.mongodb.net/").then(() => console.log("db connected"))
+.catch((error) => console.log(error));
+
+app.use('/', studentRouter);
+app.get('/users', (req, res) => {
+    console.log("hello this is");
+    res.send("hello this is from backend");
+})
+
+app.listen(7007, () => {
+    console.log("server running at port 7007")
 });
-
-server.listen(3012,()=>{
-    console.log(`Server runnning at: ${3012}`)
-}
-);
